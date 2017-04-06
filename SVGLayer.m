@@ -236,7 +236,8 @@ CGRect _AdjustCGRectForContentsGravity(CGRect aRect, CGSize aSize, NSString *aGr
 //        layer.strokeColor = _strokeColor
 //                         ?: (__bridge CGColorRef)path.svgAttributes[@"stroke"]
 //                         ?: [[PSVGColor blackColor] CGColor];
-        layer.strokeColor = CGColorRetain(_strokeColor);
+        
+        layer.strokeColor = CGColorRetain([[PSVGColor whiteColor] CGColor]);
         if (_scaleLineWidth && path.svgAttributes[@"stroke-width"]) {
             CGFloat lineScale = (frame.size.width/size.width + frame.size.height/size.height) / 2.0;
             layer.lineWidth = [path.svgAttributes[@"stroke-width"] floatValue] * lineScale;
