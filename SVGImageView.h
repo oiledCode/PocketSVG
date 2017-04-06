@@ -75,7 +75,7 @@ IB_DESIGNABLE
  *  @param fillColor A color to fill the SVG shape with.
  *
  */
-@property(nonatomic, copy) IBInspectable PSVGColor *fillColor;
+@property(nonatomic, retain) IBInspectable PSVGColor *fillColor;
 
 
 /*!
@@ -84,7 +84,7 @@ IB_DESIGNABLE
  *  @param strokeColor The color to stroke the path with.
  *
  */
-@property(nonatomic, copy) IBInspectable PSVGColor *strokeColor;
+@property(nonatomic, retain) IBInspectable PSVGColor *strokeColor;
 
 
 /*!
