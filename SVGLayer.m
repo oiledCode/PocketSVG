@@ -198,12 +198,11 @@ CGRect _AdjustCGRectForContentsGravity(CGRect aRect, CGSize aSize, NSString *aGr
 
 - (CGSize)preferredFrameSize
 {
-    return CGSizeMake(30, 30);
-//    CGRect bounds = CGRectZero;
-//    for(SVGBezierPath *path in _untouchedPaths) {
-//        bounds = CGRectUnion(bounds, path.bounds);
-//    }
-//    return bounds.size;
+    CGRect bounds = CGRectZero;
+    for(SVGBezierPath *path in _untouchedPaths) {
+        bounds = CGRectUnion(bounds, path.bounds);
+    }
+    return bounds.size;
 }
 
 - (void)layoutSublayers
