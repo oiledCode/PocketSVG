@@ -215,7 +215,7 @@ CGRect _AdjustCGRectForContentsGravity(CGRect aRect, CGSize aSize, NSString *aGr
 #endif
 
     CGSize const size  = [self preferredFrameSize];
-    CGRect const frame = _AdjustCGRectForContentsGravity(self.bounds, size, /*self.contentsGravity*/ kCAGravityResizeAspectFill);
+    CGRect const frame = _AdjustCGRectForContentsGravity(self.bounds, size, self.contentsGravity);
 
     CGAffineTransform const scale = CGAffineTransformMakeScale(frame.size.width  / size.width,
                                                                frame.size.height / size.height);
